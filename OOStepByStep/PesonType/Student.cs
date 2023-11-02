@@ -8,13 +8,24 @@ namespace OOStepByStep.PesonType
 {
     public class Student : Person
     {
+        private int? classid;
         public Student(string name, int age) : base(name, age)
         {
         }
 
+        public Student(string name, int age, int classid) : base(name, age)
+        {
+            this.classid = classid;
+        }
+
         public override string SelfIntroduce()
         {
-            return base.SelfIntroduce() + " " + "I am a Student.";
+            if (classid == null)
+            {
+                return base.SelfIntroduce() + " " + "I am a Student.";
+            }
+
+            return base.SelfIntroduce() + " " + $"I am a Student of Class {classid}.";
         }
     }
 }
