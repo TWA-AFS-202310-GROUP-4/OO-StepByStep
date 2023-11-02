@@ -85,5 +85,21 @@ namespace OOStepByStepTest
             //then
             Assert.Equal(expectedMes, res);
         }
+
+        [Fact]
+        public void Should_only_return_teacher_welcome__when_class_add_new_teacher_given_class_with_student()
+        {
+            // Given
+            var student1 = new Student("Jim", 10);
+            var student2 = new Student("Bob", 3);
+            var teacher = new Teacher("Amy", 22);
+            var class1 = new Class(3, teacher);
+            class1.AddNewStudent(student1);
+            //when
+            var res = class1.AddNewStudent(student2);
+            var expectedMes = "My name is Amy. I am 22 years old. I am a Teacher of Class 3. Welcome Bob join class 3.\nMy name is Jim. I am 10 years old. I am a Student of Class 3. Welcome Bob join class 3.\nMy name is Bob. I am 3 years old. I am a Student of Class 3. Welcome Bob join class 3.";
+            //then
+            Assert.Equal(expectedMes, res);
+        }
     }
 }

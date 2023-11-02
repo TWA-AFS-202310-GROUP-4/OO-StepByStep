@@ -25,15 +25,21 @@ namespace OOStepByStep
         public string AddNewStudent(Student newComer)
         {
             var commonWel = ShowWeclomeSentence(newComer.Name);
+            var welcome = teacher.SelfIntroduce() + " " + commonWel;
+            newComer.Classid = classid;
             if (students.Count == 0)
             {
-                newComer.Classid = classid;
                 students.Add(newComer);
-                var techerWelcome = teacher.SelfIntroduce() + " " + commonWel;
-                return techerWelcome;
+                return welcome;
             }
 
-            return commonWel;
+            students.Add(newComer);
+            foreach (var student in students)
+            {
+                welcome += "\n" + student.SelfIntroduce() + " " + commonWel;
+            }
+
+            return welcome;
         }
 
         private string ShowWeclomeSentence(string newStuName)
