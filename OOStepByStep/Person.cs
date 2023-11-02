@@ -8,19 +8,18 @@ namespace OOStepByStep
 {
     public class Person
     {
-        private string name;
-        private int age;
-
         public Person()
         {
         }
 
         public Person(string name, int age)
         {
-            this.name = name;
-            this.age = age;
+            this.Name = name;
+            this.Age = age;
         }
 
+        public string Name { get; set; }
+        public int Age { get; set; }
         public virtual string SelfIntroduce()
         {
             return IntroduceName() + " " + IntroduceAge();
@@ -28,12 +27,12 @@ namespace OOStepByStep
 
         private string IntroduceName()
         {
-            return $"My name is {name}.";
+            return $"My name is {Name}.";
         }
 
         private string IntroduceAge()
         {
-            return $"I am {age} years old.";
+            return $"I am {Age} years old.";
         }
     }
 }

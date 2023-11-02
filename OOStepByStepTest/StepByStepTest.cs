@@ -1,5 +1,6 @@
 ﻿using OOStepByStep;
 using OOStepByStep.PesonType;
+using System.Globalization;
 using Xunit;
 
 namespace OOStepByStepTest
@@ -58,7 +59,6 @@ namespace OOStepByStepTest
             Assert.Equal(expectedMes, res);
         }
 
-
         [Fact]
         public void Should_return_name_age_and_teacher_classid_when_teacher_SelfIntroduce_given_teacher_name_age_and_classid()
         {
@@ -68,6 +68,20 @@ namespace OOStepByStepTest
             //when
             var res = teacher.SelfIntroduce();
 
+            //then
+            Assert.Equal(expectedMes, res);
+        }
+
+        [Fact]
+        public void Should_only_return_teacher_welcome__when_class_add_new_teacher_given_class_with_no_student()
+        {
+            // Given
+            var student = new Student("Jim", 10);
+            var teacher = new Teacher("Amy", 22);
+            var class1 = new Class(3, teacher);
+            //when
+            var res = class1.AddNewStudent(student);
+            var expectedMes = "My name is Amy. I am 22 years old. I am a Teacher of Class 3. Welcome Jim join class 3.";
             //then
             Assert.Equal(expectedMes, res);
         }
