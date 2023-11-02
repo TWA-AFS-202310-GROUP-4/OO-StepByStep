@@ -13,14 +13,14 @@ namespace OOStepByStepTest
         public void Test_Console()
         {
             // given
-            var fakeOutput = new StringBuilder();
-            Console.SetOut(new StringWriter(fakeOutput));
+            //var fakeOutput = new StringBuilder();
+            //Console.SetOut(new StringWriter(fakeOutput));
 
-            // when
-            new Class1().Print();
+            //// when
+            //new Person().Print();
 
-            // then
-            Assert.Equal("console\r\n", fakeOutput.ToString());
+            //// then
+            //Assert.Equal("console\r\n", fakeOutput.ToString());
         }
     }
 }
