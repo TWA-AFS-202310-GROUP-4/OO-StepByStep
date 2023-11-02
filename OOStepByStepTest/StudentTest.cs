@@ -13,6 +13,17 @@ public class StudentTest
         //When
         var message = person.SelfIntroduce();
         //Then
-        Assert.Equal("My name is Tom. I am 18 years old.I am a student", message);
+        Assert.Equal("My name is Tom. I am 18 years old.I am a student.", message);
+    }
+
+    [Fact]
+    public void Should_return_name_age_occupation_classnumber_when_introduce()
+    {
+        //Given
+        var person = new Student("Tom", 18, 2);
+        //When
+        var message = person.SelfIntroduce();
+        //Then
+        Assert.Equal("My name is Tom. I am 18 years old.I am a student of class 2", message);
     }
 }
