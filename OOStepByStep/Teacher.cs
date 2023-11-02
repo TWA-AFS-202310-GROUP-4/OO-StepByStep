@@ -10,11 +10,6 @@ namespace OOStepByStep
     {
         private int classNum;
 
-        public Teacher()
-        {
-            this.classNum = -1;
-        }
-
         public Teacher(string name, int age) : base(name, age)
         {
             this.classNum = -1;

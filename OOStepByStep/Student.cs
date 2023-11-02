@@ -10,15 +10,11 @@ namespace OOStepByStep
     {
         private int classNum;
 
-        public Student()
-        {
-            this.classNum = -1;
-        }
-
         public Student(string name, int age) : base(name, age)
         {
             this.classNum = -1;
         }
+
         public Student(string name, int age, int classNum) : base(name, age)
         {
             this.classNum = classNum;
@@ -34,7 +30,6 @@ namespace OOStepByStep
             {
                 return base.Introduce() + $" I am a student of class {classNum}.";
             }
-            
         }
     }
 }

@@ -11,14 +11,20 @@ namespace OOStepByStep
         private string name;
         private int age;
 
-        public Person()
-        {
-        }
-
         public Person(string name, int age)
         {
             this.name = name;
             this.age = age;
+        }
+
+        public string GetName()
+        {
+            return this.name;
+        }
+
+        public int GetAge()
+        {
+            return this.age;
         }
 
         public virtual string Introduce()
