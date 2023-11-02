@@ -17,6 +17,11 @@ public class Person
         this.age = age;
     }
 
+    public string GetName()
+    {
+        return name;
+    }
+
     public virtual string SelfIntroduce()
     {
         return $"My name is {name}. I am {age} years old.";

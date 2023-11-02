@@ -29,6 +29,5 @@ public class Teacher : Person
         {
             return base.SelfIntroduce() + $" I am a teacher of class {classRoomNumber}";
         }
-        
     }
 }
