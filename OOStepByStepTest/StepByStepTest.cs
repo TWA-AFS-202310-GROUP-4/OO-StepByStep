@@ -57,5 +57,19 @@ namespace OOStepByStepTest
             //then
             Assert.Equal(expectedMes, res);
         }
+
+
+        [Fact]
+        public void Should_return_name_age_and_teacher_classid_when_teacher_SelfIntroduce_given_teacher_name_age_and_classid()
+        {
+            // Given
+            var teacher = new Teacher("Amy", 22, 3);
+            var expectedMes = "My name is Amy. I am 22 years old. I am a Teacher of Class 3.";
+            //when
+            var res = teacher.SelfIntroduce();
+
+            //then
+            Assert.Equal(expectedMes, res);
+        }
     }
 }
