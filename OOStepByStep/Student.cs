@@ -17,10 +17,10 @@ namespace OOStepByStep
         {
             if (ClassNumber != -1)
             {
-                return base.Introduce() + $". I am a student of class {ClassNumber}";
+                return base.Introduce() + $" I am a student of class {ClassNumber}.";
             }
 
-            return base.Introduce() + ". I am a student";
+            return base.Introduce() + " I am a student.";
         }
     }
 }

@@ -12,9 +12,14 @@
             this.name = name;
         }
 
+        public string Name
+        {
+            get { return name; }
+        }
+
         public virtual string Introduce()
         {
-            return $"My name is {name}. I am {age} years old";
+            return $"My name is {name}. I am {age} years old.";
         }
     }
 }
