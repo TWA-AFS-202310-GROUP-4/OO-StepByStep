@@ -14,13 +14,14 @@ namespace OOStepByStep
         public Person()
         {
         }
+
         public Person(string name, int age)
         {
             this.name = name;
             this.age = age;
         }
 
-        public string SelfIntroduce()
+        public virtual string SelfIntroduce()
         {
             return IntroduceName() + " " + IntroduceAge();
         }
