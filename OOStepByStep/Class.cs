@@ -33,12 +33,13 @@ namespace OOStepByStep
                 return welcome;
             }
 
-            students.Add(newComer);
+            welcome = welcome + "\n";
             foreach (var student in students)
             {
-                welcome += "\n" + student.SelfIntroduce() + " " + commonWel;
+                welcome += string.Join("\n", student.SelfIntroduce() + " " + commonWel);
             }
 
+            students.Add(newComer);
             return welcome;
         }
 

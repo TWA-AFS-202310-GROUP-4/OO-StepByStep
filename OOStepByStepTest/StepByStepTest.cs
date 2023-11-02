@@ -97,7 +97,7 @@ namespace OOStepByStepTest
             class1.AddNewStudent(student1);
             //when
             var res = class1.AddNewStudent(student2);
-            var expectedMes = "My name is Amy. I am 22 years old. I am a Teacher of Class 3. Welcome Bob join class 3.\nMy name is Jim. I am 10 years old. I am a Student of Class 3. Welcome Bob join class 3.\nMy name is Bob. I am 3 years old. I am a Student of Class 3. Welcome Bob join class 3.";
+            var expectedMes = "My name is Amy. I am 22 years old. I am a Teacher of Class 3. Welcome Bob join class 3.\nMy name is Jim. I am 10 years old. I am a Student of Class 3. Welcome Bob join class 3.";
             //then
             Assert.Equal(expectedMes, res);
         }
